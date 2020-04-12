@@ -21,9 +21,9 @@ Equipamento:
 
 OrdemManutencao:
 
-- Salvar uma equipamento
-- Deletar uma Equipamento
-- Atualizar uma equipamento
+- Salvar uma ordem
+- Deletar uma ordem
+- Atualizar uma ordem
 - Retornar a lista de ordem, ordenando por data
 
 As informações são representadas através do formado JSON, que são persistidas e mapeadas pelo JPA usando Hibernate com banco de dados PostgreSQL.
