@@ -30,12 +30,14 @@ As informações são representadas através do formado JSON, que são persistid
 Através do campo anotacoes é possível armazenar quaisquer informações de interesse, utilizando JSONB do Prostgresql.
 
 Exemplo de Equipamento:
+```
   "equipamento": {
     "nome": "Máquina I"
   }
 
-
+```
 Exemplo de Ordem:
+```
 {
  "dataManutencao": "2020-04-04 03:00:00",
   "equipamento": {
@@ -44,7 +46,7 @@ Exemplo de Ordem:
   },
   "anotacoes": "{\"local\": \"Predio I\" , \"responsavel\" : \"Wagner\"}"
 }
-
+```
 
 
 
