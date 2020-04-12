@@ -25,7 +25,7 @@ private static final long serialVersionUID = 1L;
 	private Date dataManutencao;	
 	
     @OneToOne
-    @JoinColumn(name = "equipamento_id", unique = true, nullable = false)
+    @JoinColumn(name = "equipamento_id", unique = true)
     private Equipamento equipamento;
 
 	public OrdemManutencao() {
