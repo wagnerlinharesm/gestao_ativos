@@ -27,6 +27,25 @@ OrdemManutencao:
 - Retornar a lista de ordem, ordenando por data
 
 As informações são representadas através do formado JSON, que são persistidas e mapeadas pelo JPA usando Hibernate com banco de dados PostgreSQL.
+Através do campo anotacoes é possível armazenar quaisquer informações de interesse, utilizando JSONB do Prostgresql.
+
+Exemplo de Equipamento:
+
+  "equipamento": {
+    "nome": "Máquina I"
+  }
+
+Exemplo de Ordem:
+
+{
+ "dataManutencao": "2020-04-04 03:00:00",
+  "equipamento": {
+    "id": 2,
+    "nome": "Máquina I"
+  },
+  "anotacoes": "{\"local\": \"Predio I\" , \"responsavel\" : \"Wagner\"}"
+}
+
 
 
 
