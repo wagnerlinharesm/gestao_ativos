@@ -12,6 +12,10 @@ import org.hibernate.annotations.TypeDef;
 // Entidade para Tabela tb_ordem_manutencao
 @Entity
 @Table(name="TB_ORDEM_MANUTENCAO")
+@TypeDef(
+		name = "jsonb",
+		typeClass = JsonBinaryType.class
+)
 
 public class OrdemManutencao implements Serializable {
 private static final long serialVersionUID = 1L;
@@ -28,6 +32,10 @@ private static final long serialVersionUID = 1L;
     @JoinColumn(name = "equipamento_id", unique = true)
     private Equipamento equipamento;
 
+	@Type(type = "jsonb")
+	@Column(columnDefinition = "jsonb")
+	private String anotacoes;
+
 	public OrdemManutencao() {
 
 	}
@@ -36,8 +44,15 @@ private static final long serialVersionUID = 1L;
 		this.equipamento = equipamento;
 	}
 
+	public String getAnotacoes() {
+		return anotacoes;
+	}
 
- 	public long getId() {
+	public void setAnotacoes(String anotacoes) {
+		this.anotacoes = anotacoes;
+	}
+
+	public long getId() {
 		return id;
 	}
 
